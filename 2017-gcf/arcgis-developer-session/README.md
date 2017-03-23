@@ -1,1 +1,1 @@
-Live: https://ycabon.github.io/presentations/2017-devsummit/programming-patterns-and-api-fundamentals/index.html
+Live: https://ynunokawa.github.io/geodev-presentations/2017-gcf/arcgis-developer-session/index.html
