@@ -74,16 +74,25 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## GeoDev Meetup
 
-![GeoDev Meetup](images/geodevmeetup.png)
+<img src="images/geodevmeetup.png" alt="GeoDev Meetup" style="max-height:600px;">
+
+---
+
+## GeoDev Meetup
+
+- もくもく会
+- LT (ライトニングトーク)
+- connpass で募集
+
+<img src="images/connpass.png" alt="Connpass" style="max-height:600px;">
 
 ---
 
 ## GeoDev Meetup
 
 - 毎月開催
-- もくもく会
-- LT
-- connpass で募集
+
+<img src="images/geodevmeetup_members.png" alt="GeoDev Meetup 参加メンバー" style="max-height:600px;">
 
 ---
 
@@ -92,7 +101,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 - RESAS API ハッカソン（東京x2、島根、佐賀、岐阜）
 - 室蘭市観光ハッカソン
 
-![Hackathon](images/resas_hackathon.png)
+<img src="images/resas_hackathon.png" alt="Hackathon" style="max-height:600px;">
 
 ---
 
@@ -100,7 +109,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 - #geodev_jp
 
-![Twitter](images/twitter.png)
+<img src="images/twitter.png" alt="Twitter" style="max-height:600px;">
 
 ---
 
@@ -108,7 +117,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 - 弊社エンジニアが技術情報を発信しています！
 
-![GeoNet](images/geonet.png)
+<img src="images/geonet.png" alt="GeoNet" style="max-height:600px;">
 
 ---
 
@@ -116,7 +125,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 - JXUG（Xamarin）
 
-![JXUG x GeoDev](images/jxug_geodev.png)
+<img src="images/jxug_geodev.png" alt="JXUG x GeoDev" style="max-height:600px;">
 
 ---
 
@@ -131,7 +140,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
   - 現在は事業化に向けてプロジェクト進行中！
     - @Startup Hub Tokyo
 
-![Tsuredatsu](images/tsuredatsu.png)
+<img src="images/tsuredatsu.png" alt="Tsuredatsu" style="max-height:600px;">
 
 ---
 
