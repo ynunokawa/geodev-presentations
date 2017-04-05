@@ -139,6 +139,54 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
+## みんなで遊べるゲームをつくったよ！
+
+- 屋内測位 + ジオフェンス + リアルタイム送受信 = ？
+
+---
+
+## 室内の歩行距離を競おう！
+
+- ルール
+  - ３チームに分かれます
+  - チームごとの代表者 (有志) がプレイヤーになります
+  - プレイヤー以外の参加者はサポーターになります
+  - プレイヤーは室内での歩行距離 = スコアを稼ぎます
+  - サポーターはジオフェンスを打ち込んで他チームのプレイヤーのジャマをします
+  - プレイヤーは他チームのサポーターが作ったジオフェンスに入ると減点されます
+
+---
+
+## 要素技術①：屋内測位
+
+- Indoor Atlas
+
+---
+
+## 要素技術②：ジオフェンス
+
+- ArcGIS GeoEvent Server
+
+---
+
+## 要素技術③：リアルタイム送受信
+
+- WebSocket (`ws://`)
+
+---
+
+## 構成図
+
+<img src="images/diagram1.png" alt="Diagram1" style="max-height:600px;">
+
+---
+
+## 構成図
+
+<img src="images/diagram2.png" alt="Diagram2" style="max-height:600px;">
+
+---
+
 ## Basemap, Ground and Operational Layers
 
 - or by specifying them
