@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>FeatureLayer</title>
+
+<link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.20/"></script>
+
+<style>
+html, body, #map {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+</style>
+
+<script>
+require([
+    "esri/map",
+    "esri/layers/FeatureLayer",
+    "esri/geometry/Circle",
+    "esri/graphic",
+    "dojo/domReady!"
+  ],
+  function(
+    Map,
+    FeatureLayer,
+    Circle,
+    Graphic
+  ) {
+
+    var map = new Map("map", {
+      basemap: "hybrid",
+      center: [139.7606, 35.6792],
+      zoom: 14
+    });
+
+    var featureLayer = new FeatureLayer("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/geofence_devsession2017/FeatureServer/0");
+
+    map.addLayer(featureLayer);
+    
+    map.on("click", function(evt) {
+      var geom = new Circle(evt.mapPoint,{
+        "radius": 2000
+      });
+      var attr = { "team": 1 };
+      var graphic = new Graphic(geom, null, attr);
+      featureLayer.applyEdits([graphic], null, null, function (res) {
+        console.log(res);
+        setTimeout(function () {
+          graphic.attr("OBJECTID", res.objectId);
+          featureLayer.applyEdits(null, null, [graphic]);
+        }, 3000);
+      });
+    });
+
+  });
+</script>
+</head>
+
+<body>
+  <div id="map"></div>
+</body>
+
+</html>
