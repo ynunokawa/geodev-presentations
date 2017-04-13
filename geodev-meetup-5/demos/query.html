@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>L.esri.Query - Leaflet.js</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../../template/geodev.ico" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/esri-leaflet@2.0.8"></script>
+	<script src="https://unpkg.com/esri-leaflet-renderers@2.0.4"></script>
+	<link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.4/dist/esri-leaflet-geocoder.css">
+  	<script src="https://unpkg.com/esri-leaflet-geocoder@2.2.4"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<style>
+		body { margin:0; padding:0; }
+		#map { position: absolute; top:0; bottom:0; right:0; left:0; }
+	</style>
+	
+</head>
+<body>
+
+<div id="map"></div>
+<script>
+
+	// 地図の初期化（id 属性が 'map' の <div> に展開）
+	const map = L.map('map', {
+		center: [35.6792, 139.7606],
+		zoom: 13
+	});
+
+	// 背景用の地図タイル (OpenStreetMap) を追加
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	// 検索結果用の空レイヤー（空間検索）
+	const filterResults = L.geoJson(null, {
+		onEachFeature: function (feature, layer) {
+		layer.bindPopup(feature.properties['施設名']);
+	}
+	}).addTo(map);
+	// 検索結果用の空レイヤー（住所検索）
+	const results = L.layerGroup().addTo(map);
+
+	// ArcGIS 住所検索サービス
+	const arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
+
+	// 住所検索コンポーネント
+	const searchControl = L.esri.Geocoding.geosearch({
+		providers: [arcgisOnline],
+		placeholder: '住所を入力してください'
+	}).addTo(map);
+
+	// 住所検索の結果取得イベント リスナー
+	searchControl.on('results', (data) => {
+		// 検索結果をクリア
+		results.clearLayers();
+		filterResults.clearLayers();
+		
+		// 住所検索結果の緯度経度
+		const resultLatlng = data.results[0].latlng;
+		// バッファー半径
+		const r = 500;
+		// 住所検索結果のバッファー表示
+		results.addLayer(L.circle(resultLatlng, r));
+		// 空間検索用クエリ
+		const query = L.esri.query({
+			url: 'https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/%E4%BF%9D%E8%82%B2%E5%9C%9223%E5%8C%BA/FeatureServer/0'
+		});
+		query.nearby(resultLatlng, r);
+		// クエリの実行
+		query.run((error, featureCollection, response) => {
+			// クエリ結果の表示
+			filterResults.addData(featureCollection);
+		});
+	});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>L.esri.FeatureLayer - Leaflet.js</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../../template/geodev.ico" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/esri-leaflet@2.0.8"></script>
+	<script src="https://unpkg.com/esri-leaflet-renderers@2.0.4"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<style>
+		body { margin:0; padding:0; }
+		#map { position: absolute; top:0; bottom:0; right:0; left:0; }
+	</style>
+	
+</head>
+<body>
+
+<div id="map"></div>
+<script>
+
+	// 地図の初期化（id 属性が 'map' の <div> に展開）
+	const map = L.map('map', {
+		center: [35.6792, 139.7606],
+		zoom: 13
+	});
+
+	// 背景用の地図タイル (OpenStreetMap) を追加
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	// フィーチャ レイヤー
+	L.esri.featureLayer({
+		url: 'https://services1.arcgis.com/RVzd6I1g6h9fqyZM/arcgis/rest/services/streets/FeatureServer/0'
+	}).addTo(map);
+
+</script>
+
+</body>
+</html>
