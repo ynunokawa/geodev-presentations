@@ -13,10 +13,9 @@
 
 - #### ヌノカワユウスケ (<a href="https://twitter.com/_ynunokawa" target="_blank">@_ynunokawa</a>)
   - プロダクトマネージャー
-  - ESRIジャパン株式会社
   - 開発者向けプログラム、JavaScript API を担当
   - データ可視化やデザインが得意
-  - 最近は React/Redux、WebGL をちゃんとやりたい
+  - 今年は React/Redux、WebGL をちゃんとやりたい
 
 ---
 
@@ -150,7 +149,7 @@ $.getJSON('https://opendata.arcgis.com/datasets/507300cc932d4ca4bd2e5e7b0882d57f
 ## 空間的にデータを抽出したいときはどうすれば？
 
 - たとえば...
-  - 選択した都道府県に含まれる施設情報を抽出したい
+  - 選択した都道府県内の学校だけを地図に表示したい
   - GPS 等で取得した現在位置の近くにある店舗情報を閲覧したい
   - 駅から徒歩○○分圏内の wifi スポットを探したい
 
@@ -172,22 +171,23 @@ $.getJSON('https://opendata.arcgis.com/datasets/507300cc932d4ca4bd2e5e7b0882d57f
 ## フィーチャ レイヤー
 
 - ArcGIS の Web サービス（データ配信系）
+- 実体はほぼ ArcGIS Query API と言っても差し支えない
 - 可視化のためのメタ情報も持ってる
-- 実体は ArcGIS Query API と言っても差し支えない
-- フィーチャ レイヤーを作ると勝手に Query API でデータ取れるようになるスグレモノ！
+- 作ると勝手に Query API でデータ取れるようになるスグレモノ！
     - データベース要らない
     - API 書かなくていい
     - 空間データの扱いとか知らなくていい
+    - 更新もできちゃう
 
 ---
 
 ## Query API を叩いてみよう
 
 - リクエスト例
-    - 中心座標 (`geometry`) から
+    - 練馬駅 (`geometry`) から
     - 半径 500 メートル (`distance`, `units`)
     - 以内に含まれる (`spatialRel`) データを
-    - GeoJSON で返す (`f`)
+    - GeoJSON (`f`) で返す
 
 <a href="https://jsfiddle.net/3uu5v1p3/2/" target="_blank">
 ```
@@ -238,11 +238,11 @@ L.esri.featureLayer({
 
 ## L.esri.Query
 
-一定距離の円内に含まれるデータを検索・表示
+データを検索 (空間/属性)
 
 ```js
 // 空間検索用クエリ
-  var query = L.esri.query({
+const query = L.esri.query({
 	url: 'https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/%E4%BF%9D%E8%82%B2%E5%9C%9223%E5%8C%BA/FeatureServer/0'
 });
 // 特定の中心座標から一定距離の円内に含まれるデータを検索
@@ -253,6 +253,15 @@ query.run(function(error, featureCollection, response){
     filterResults.addData(featureCollection);
 });
 ```
+
+---
+
+## ブログ書いてます
+
+- Leaflet.js x ArcGIS の Tips をブログで連載してます
+  - <a href="http://arcg.is/2p07MyG" target="_blank">http://arcg.is/2p07MyG</a>
+
+![](images/esri-leaflet-tips.png)
 
 ---
 
