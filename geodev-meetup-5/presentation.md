@@ -3,7 +3,9 @@
 ## Leaflet.js で体験する ArcGIS Query API
 #### GeoDev Meetup #5
 
-<a href="https://github.com/ynunokawa/geodev-presentations/tree/gh-pages/geodev-meetup-5/" target="_blank"><img alt="octocat" src="../template/octocat.png" style="border-radius:50%;" ></a>
+<span style="font-size:0.7em;">[http://bit.ly/2o9YkEc](http://bit.ly/2o9YkEc)</span>
+
+<a href="https://github.com/ynunokawa/geodev-presentations/tree/master/geodev-meetup-5/" target="_blank"><img alt="octocat" src="../template/octocat.png" style="border-radius:50%;" ></a>
 
 ---
 
