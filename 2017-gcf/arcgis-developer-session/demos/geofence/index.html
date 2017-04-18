@@ -18,44 +18,71 @@ html, body, #map {
 </style>
 
 <script>
-require([
-    "esri/map",
-    "esri/layers/FeatureLayer",
-    "esri/geometry/Circle",
-    "esri/graphic",
-    "dojo/domReady!"
-  ],
-  function(
-    Map,
-    FeatureLayer,
-    Circle,
-    Graphic
-  ) {
+  var teamNumber = 0;
+  var geofenceRadius = 2;
+  var activate = true;
 
-    var map = new Map("map", {
-      basemap: "hybrid",
-      center: [139.7606, 35.6792],
-      zoom: 14
-    });
+  require([
+      "esri/map",
+      "esri/layers/FeatureLayer",
+      "esri/geometry/Circle",
+      "esri/graphic",
+      "esri/arcgis/utils",
+      "esri/request",
+      "dojo/domReady!"
+    ],
+    function(
+      Map,
+      FeatureLayer,
+      Circle,
+      Graphic,
+      arcgisUtils,
+      esriRequest
+    ) {
+      teamNumber = getURLParamfromUrl('team');
+      geofenceRadius = getURLParamfromUrl('radius') || 2;
 
-    var featureLayer = new FeatureLayer("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/geofence_devsession2017/FeatureServer/0");
-
-    map.addLayer(featureLayer);
-    
-    map.on("click", function(evt) {
-      var geom = new Circle(evt.mapPoint,{
-        "radius": 2000
+      arcgisUtils.createMap("833eef7f42d84159885967f50a9eca7c", "map").then(function (response) {
+        var map = response.map;
+        addGeofence(map);
       });
-      var attr = { "team": 1 };
-      var graphic = new Graphic(geom, null, attr);
-      featureLayer.applyEdits([graphic], null, null, function (res) {
-        console.log(res);
-        setTimeout(function () {
-          graphic.attr("OBJECTID", res.objectId);
-          featureLayer.applyEdits(null, null, [graphic]);
-        }, 3000);
-      });
-    });
+
+      function addGeofence(map) {
+        var featureLayer = new FeatureLayer("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/geofence_devsession2017/FeatureServer/0");
+        map.addLayer(featureLayer);
+        
+        map.on("click", function(evt) {
+          if (activate === true) {
+            activate = false;
+            
+            var geom = new Circle(evt.mapPoint,{
+              "radius": geofenceRadius
+            });
+            var attr = { "teamname": "gcf-2017-" + teamNumber }; // gcf-2017-1 | gcf-2017-2 | gcf-2017-3
+            var graphic = new Graphic(geom, null, attr);
+            featureLayer.applyEdits([graphic], null, null, function (res) {
+              console.log(res);
+              setTimeout(function () {
+                graphic.attr("OBJECTID", res.objectId);
+                featureLayer.applyEdits(null, null, [graphic]);
+                activate = true;
+              }, 3000);
+            });
+          }
+        });
+      }
+
+      function getURLParamfromUrl(paramText) {
+        var number = 0;
+        var urlParams = location.hash.substring(1).split('&');
+        for (var i=0; urlParams[i]; i++) {
+          var param = urlParams[i].split('=');
+          if (param[0] === paramText) {
+             number = param[1];
+          }
+        }
+        return number;
+      }
 
   });
 </script>
