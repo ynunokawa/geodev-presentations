@@ -44,6 +44,11 @@ html, body, #map {
 
       arcgisUtils.createMap("833eef7f42d84159885967f50a9eca7c", "map").then(function (response) {
         var map = response.map;
+        map.hideZoomSlider();
+        map.disableDoubleClickZoom();
+        map.disableRubberBandZoom();
+        map.disableScrollWheelZoom();
+        map.disableShiftDoubleClickZoom();
         addGeofence(map);
       });
 
