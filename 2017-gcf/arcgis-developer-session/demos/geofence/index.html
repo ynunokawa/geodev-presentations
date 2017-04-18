@@ -15,6 +15,47 @@ html, body, #map {
   height: 100%;
   width: 100%;
 }
+#map_zoom_slider {
+  display: none;
+}
+#graphicsLayer0_layer > g > path {
+  animation: generate .4s 1;
+  -webkit-animation: generate .4s 1;
+}
+@keyframes generate {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(0,0);
+    opacity: 0;
+  }
+  30% {
+    transform-origin: 50% 50%;
+    transform: scale(0.5,0.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes generate {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(0,0);
+    opacity: 0;
+  }
+  30% {
+    transform-origin: 50% 50%;
+    transform: scale(0.5,0.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
 </style>
 
 <script>
