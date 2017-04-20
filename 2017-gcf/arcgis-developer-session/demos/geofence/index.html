@@ -15,6 +15,27 @@ html, body, #map {
   height: 100%;
   width: 100%;
 }
+path[in-geofence="gcf-2017-1"] {
+  stroke-width: 2;
+  stroke: rgb(255, 255, 255);
+}
+path[in-geofence="gcf-2017-2"] {
+  stroke-width: 2;
+  stroke: rgb(255, 255, 255);
+}
+path[in-geofence="gcf-2017-3"] {
+  stroke-width: 2;
+  stroke: rgb(255, 255, 255);
+}
+path[data-classbreak="gcf-2017-1"] {
+  fill: rgb(255, 127, 127);
+}
+path[data-classbreak="gcf-2017-2"] {
+  fill: rgb(0, 112, 255);
+}
+path[data-classbreak="gcf-2017-3"] {
+  fill: rgb(112, 168, 0);
+}
 #alert {
   position: absolute;
   top: 0;
@@ -84,6 +105,10 @@ html, body, #map {
       "esri/layers/FeatureLayer",
       "esri/geometry/Circle",
       "esri/graphic",
+      "esri/renderers/SimpleRenderer", 
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/symbols/SimpleLineSymbol",
+      "esri/Color",
       "esri/arcgis/utils",
       "esri/request",
       "dojo/domReady!"
@@ -93,6 +118,10 @@ html, body, #map {
       FeatureLayer,
       Circle,
       Graphic,
+      SimpleRenderer,
+      SimpleMarkerSymbol,
+      SimpleLineSymbol,
+      Color,
       arcgisUtils,
       esriRequest
     ) {
@@ -108,11 +137,42 @@ html, body, #map {
         map.disableShiftDoubleClickZoom();
         map.disableSnapping();
         addGeofence(map);
+        customRenderingStream(map);
       });
+
+      function customRenderingStream(map) {
+        var marker = new SimpleMarkerSymbol().setColor(new Color([0,0,0])).setPath("M14.5,29 23.5,0 14.5,9 5.5,0z").setOutline(new SimpleLineSymbol().setWidth(0.5).setColor(new Color([255,255,255])));
+        var renderer = new SimpleRenderer(marker);
+        renderer.setRotationInfo({
+          field: "course"
+        });
+        renderer.setSizeInfo({
+          field: "score",
+          minSize: 4,
+          maxSize: 36,
+          minDataValue: -300,
+          maxDataValue: 300,
+          valueUnit: "unknown"
+        });
+        var streamLayer = map.getLayer("stream_5102");
+        streamLayer.setRenderer(renderer);
+        console.log(streamLayer);
+        streamLayer.on("graphic-draw", function (evt) {
+          var graphic = evt.graphic;
+          var node = evt.node;
+          //node.classList.add(graphic.attributes.team_id);
+          node.setAttribute("data-classbreak", graphic.attributes.team_id);
+          console.log(node);
+
+          if (graphic.attributes.fence_id !== null) {
+            node.setAttribute("in-geofence", graphic.attributes.team_id);
+          }
+        });
+      }
 
       function addGeofence(map) {
         var featureLayer = new FeatureLayer("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/geofence_devsession2017/FeatureServer/0", {
-          refreshInterval: 0.01667
+          //refreshInterval: 0.01667
         });
         map.addLayer(featureLayer);
         
