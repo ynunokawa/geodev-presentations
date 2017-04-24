@@ -171,6 +171,8 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 - Indoor Atlas
 
+![IndoorAtlas](images/indoor_atlas.png)
+
 ---
 
 ## 要素技術②：ジオフェンス
@@ -196,6 +198,178 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 ## 構成図
 
 <img src="images/diagram2.png" alt="Diagram2" style="max-height:600px;">
+
+---
+
+# ArcGIS を使った開発
+## 最新情報
+
+---
+
+## 開発者向けサービス
+ - 2017年3月より開発者向けのサービスが更新されました
+
+![ArcGIS for Developers](images/arcgis_for_developers.png)
+
+---
+
+## ArcGIS Developer Subscription
+![ArcGIS Developer Subscription](images/developer_subscription.png)
+
+- 各プランには、ArcGIS Online Deployment Plan（50 クレジット/月）が付属します
+
+---
+
+## API/SDK
+![APS/SDK](images/api_sdk.png)
+
+
+---
+## ArcGIS API for JavaScript
+
+![ArcGIS API for JavaScript](images/javascript.png)
+
+---
+## ArcGIS API for JavaScript
+- 2017年4月にバージョン 4.3 を国内リリース
+ - フィーチャの編集
+ - シーン レイヤーのフィルタリング/クエリ機能
+ - 点群レイヤーの操作（点の大きさと密度調整）
+ - 新規ウィジェット追加（ベースマップ ギャラリー、スケールバー、展開）
+
+
+ [![ArcGIS API for JavaScript](images/javascript_point.png)](https://developers.arcgis.com/javascript/latest/sample-code/layers-pointcloud-size-density/live/index.html)
+
+
+---
+
+## ArcGIS Runtime SDK
+- 2017年1月にバージョン 100.0 を国内リリース
+ - API の共通化（SDK 間の機能やリリース バージョンの差を解消）
+ - ライセンス形態の変更
+ - モバイルの 3D 対応（ベータ機能）、オフライン機能の強化、ベクター タイル レイヤー、ポータル連
+
+![ArcGIS Runtime SDK](images/runtime.png)
+
+---
+
+## ArcGIS Runtime SDK
+ - Xamarin API (ArcGIS Runtime SDK for .NET）が追加
+   - Forms, iOS, Android 開発に対応
+   - 国内サポート対応検討中
+
+![ArcGIS Runtime SDK for .NET](images/runtime_xamarin.png)
+
+---
+
+## ArcGIS Pro SDK
+- 2017年5月にバージョン 1.4 を国内リリース
+  - ArcGIS Pro UI にソリューション ブランディングを付加
+   - カスタム スプラッシュ スクリーン、スタートアップ ページ、カスタム アイコンなど
+  - ロール ベースのカスタマイズ
+   - サインインした指定ユーザーのロールによるリボン UI 変更など
+
+![ArcGIS Pro](images/arcgis_pro.png)
+
+---
+
+## ArcGIS API for Python
+- 2016年12月に米国リリース
+  - Python スクリプト による Web GIS の操作と自動化
+   - データの可視化、ジオプロセシング ツールの実行、ポータル内のコンテンツ/ユーザーの管理、ビッグデータ解析
+  - 実行環境: Jupyter Notebook
+  - 国内サポート対応検討中
+
+![ArcGIS API for Python](images/python_api.png)
+
+---
+
+## 今後の予定（Esri）
+
+- ArcGIS API for JavaScript
+ - 4.4 (2017年7月) → 描画ツール、WMS/WMTS サービスのサポート
+ - 4.5 (2017年Q3) → 編集ウィジェット
+- ArcGIS Runtime SDK
+ - 100.1 (2017年6月) → モバイル 3D 対応、各種レイヤーのサポート
+ - 100.2 (2017年Q4) → ローカル コンテンツの拡充
+- ArcGIS Pro SDK
+ - 2.0 (2017年Q2) → Visual Studio 2017 対応（アセンブリに厳密名を採用するため、1.x で開発したアドインはコード修正が必要）
+- ArcGIS API for Python
+ - Web GIS のアップデートに併せた継続的なリリース
+
+---
+
+# ArcGIS Runtime SDK for Xamarin
+
+---
+
+# Esri スタートアップ・プログラム
+
+![Esri Startup Program](images/startup.png)
+
+---
+
+## スタートアップ企業の成長をサポート
+
+ - Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
+
+![Esri Startup Program](images/startup_contents.png)
+
+---
+
+## Esri スタートアッププログラムの採用企業
+
+![Esri Startup Program](images/company.png)
+
+---
+## [Mapillary](https://www.mapillary.com/)
+- スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
+- クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
+「ストリートビュー」をユーザーの手で作れる
+- 日本の OSM コミュニティでも話題となった
+
+![Mapillary](images/mapillary.png)
+
+---
+
+# まとめ
+
+---
+
+## Esri Leaflet (OSS)
+- [MUROSARU](https://esrijapan.github.io/photospot-finder/)
+  - 室蘭市で開催された「企業・団体対抗 観光ハッカソン」に参加し、公共クラウド賞を受賞
+  - ArcGIS + Leaflet.js + React
+
+![MUROSARU](images/murosaru.png)
+
+---
+
+# 開発に困ったらどうする？
+
+---
+
+## ドキュメント
+- 開発リソース集
+  - 開発を始めるには、まずこちら
+
+[![ArcGIS for Developers](images/develpoper_resource.png)](https://esrijapan.github.io/arcgis-dev-resources/index.html)
+
+---
+
+## サンプルコード
+- Esri/Esri Japan GitHub
+  - API/SDK ごとに豊富なサンプル
+
+[![GitHub](images/esrijapan_github.png)](https://esrijapan.github.io)
+
+---
+
+## コミュニティ
+- GeoNet（Esri/ESRIジャパン）
+  - ESRIジャパン社員による技術 Tips や活動報告
+
+[![GeoNet](images/esrijapan_geonet.png)](https://geonet.esri.com/groups/devcom-jp)
 
 ---
 
@@ -485,10 +659,10 @@ graphicsLayer.add(graphic);
 
 ## FeatureLayer
 
-- Displays features: 
+- Displays features:
   - `geometry`
   - `attributes`
-- Features are fetch from a service, or from a local collection 
+- Features are fetch from a service, or from a local collection
 - Their geometry is the same for the entire layer.
 - Cannot be symbolized individually
   - `Feature.renderer`
@@ -657,7 +831,7 @@ var layer = new MapImageLayer({
 
 ## LayerViews
 
-- access a layerview with [`View.whenLayerView()`](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView) 
+- access a layerview with [`View.whenLayerView()`](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
 
 ```js
   var map = new Map({
@@ -676,7 +850,7 @@ var layer = new MapImageLayer({
       layerView.visible = false
     });
 ```
-- or [`View.allLayerViews`](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#allLayerViews) 
+- or [`View.allLayerViews`](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#allLayerViews)
 
 ---
 
