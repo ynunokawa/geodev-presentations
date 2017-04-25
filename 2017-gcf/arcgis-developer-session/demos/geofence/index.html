@@ -36,6 +36,39 @@ path[data-classbreak="gcf-2017-2"] {
 path[data-classbreak="gcf-2017-3"] {
   fill: rgb(112, 168, 0);
 }
+#map_graphics_layer > image {
+  animation: scoreup 2.25s 1 forwards;
+  -webkit-animation: scoreup 2.25s 1 forwards;
+}
+@keyframes scoreup {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes scoreup {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
 #alert {
   position: absolute;
   top: 0;
@@ -99,6 +132,8 @@ path[data-classbreak="gcf-2017-3"] {
   var activate = true;
   var isAlert = false;
   var alertText = '';
+  var teamColor = [[50, 50, 50], [255, 127, 127], [0, 112, 255], [112, 168, 0]];
+  var inGeofence = [null, false, false, false];
 
   require([
       "esri/map",
@@ -108,6 +143,9 @@ path[data-classbreak="gcf-2017-3"] {
       "esri/renderers/SimpleRenderer", 
       "esri/symbols/SimpleMarkerSymbol",
       "esri/symbols/SimpleLineSymbol",
+      "esri/symbols/PictureMarkerSymbol",
+      "esri/symbols/TextSymbol",
+      "esri/layers/LabelClass",
       "esri/Color",
       "esri/arcgis/utils",
       "esri/request",
@@ -121,6 +159,9 @@ path[data-classbreak="gcf-2017-3"] {
       SimpleRenderer,
       SimpleMarkerSymbol,
       SimpleLineSymbol,
+      PictureMarkerSymbol,
+      TextSymbol,
+      LabelClass,
       Color,
       arcgisUtils,
       esriRequest
@@ -141,6 +182,16 @@ path[data-classbreak="gcf-2017-3"] {
       });
 
       function customRenderingStream(map) {
+        /*var labelSymbol = new TextSymbol().setColor(new Color("#666"));
+        labelSymbol.font.setSize("12pt");
+        var labelJson = {
+          "labelExpressionInfo": { "value": "{score}" },
+          "labelPlacement": "above-right"
+        };
+
+        var label = new LabelClass(labelJson);
+        label.symbol = labelSymbol;*/
+
         var marker = new SimpleMarkerSymbol().setColor(new Color([0,0,0])).setPath("M14.5,29 23.5,0 14.5,9 5.5,0z").setOutline(new SimpleLineSymbol().setWidth(0.5).setColor(new Color([255,255,255])));
         var renderer = new SimpleRenderer(marker);
         renderer.setRotationInfo({
@@ -155,17 +206,34 @@ path[data-classbreak="gcf-2017-3"] {
           valueUnit: "unknown"
         });
         var streamLayer = map.getLayer("stream_8192");
+        map.reorderLayer(streamLayer, 6);
         streamLayer.setRenderer(renderer);
+        //streamLayer.setLabelingInfo([label]);
         console.log(streamLayer);
         streamLayer.on("graphic-draw", function (evt) {
           var graphic = evt.graphic;
           var node = evt.node;
-          //node.classList.add(graphic.attributes.team_id);
           node.setAttribute("data-classbreak", graphic.attributes.team_id);
-          console.log(node);
 
           if (graphic.attributes.fence_id !== null) {
             node.setAttribute("in-geofence", graphic.attributes.team_id);
+            console.log(graphic.attributes.team_id);
+            if (graphic.attributes.team_id === "gcf-2017-" + teamNumber && inGeofence[Number(graphic.attributes.team_id.split("-")[2])] === false) {
+              var scoreupGraphic = new Graphic(graphic.geometry, new PictureMarkerSymbol("images/score-up.png", 70, 50));
+              map.graphics.add(scoreupGraphic);
+              setTimeout(function () {
+                map.graphics.remove(scoreupGraphic);
+              }, 2500);
+            } else if (graphic.attributes.team_id !== "gcf-2017-" + teamNumber && inGeofence[Number(graphic.attributes.team_id.split("-")[2])] === false) {
+              var scoredownGraphic = new Graphic(graphic.geometry, new PictureMarkerSymbol("images/score-down.png", 50, 50));
+              map.graphics.add(scoredownGraphic);
+              setTimeout(function () {
+                map.graphics.remove(scoredownGraphic);
+              }, 2500);
+            }
+            inGeofence[Number(graphic.attributes.team_id.split("-")[2])] = true;
+          } else {
+            inGeofence[Number(graphic.attributes.team_id.split("-")[2])] = false;
           }
         });
       }
@@ -177,6 +245,13 @@ path[data-classbreak="gcf-2017-3"] {
         map.addLayer(featureLayer);
         
         map.on("click", function(evt) {
+          /*var testsymbol = new PictureMarkerSymbol("images/score-up.png", 56, 40);
+          var testgraphic = new Graphic(evt.mapPoint, testsymbol);
+          map.graphics.add(testgraphic);
+          setTimeout(function () {
+            map.graphics.remove(testgraphic);
+          }, 2500);*/
+
           if (activate === true) {
             activate = false;
             
