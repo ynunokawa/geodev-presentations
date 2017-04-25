@@ -13,19 +13,15 @@ ESRIジャパン株式会社
 ## プログラム
 
 - ArcGIS Developer セッションとは
-  - 変遷
-  - 2017年のテーマ
-- GeoDev コミュニティの紹介
-  - ハッカソン
-  - GeoDev Meetup
-  - 外部コミュニティとのコラボ
+- 前半
+  - GeoDev コミュニティの紹介
   - GeoDev LT
 - BREAK
-- ArcGIS を使った開発
-  - 最新情報 - Esri DevSummit 2017
-  - ArcGIS を利用した開発のこれから
-  - 開発に困ったらどうする？
-
+- 後半
+  - ArcGIS を使った開発 -最新情報-
+  - ArcGIS Runtime SDK for Xamarin
+  - Esri スタートアップ プログラム
+- 終わりに
 ---
 
 <!-- .slide: class="section" -->
@@ -34,18 +30,18 @@ ESRIジャパン株式会社
 
 ---
 
-## 変遷
+## 歴史
 
 毎年開催しています。今年で 5 年目！
- - 2013 年：ソリューション開発事例
- - 2014 年：開発者のための GIS
- - 2015 年：マルチ プラットフォーム時代の最適な開発
- - 2016 年：クラウド ファースト時代の GIS アプリ開発事例
- - __2017 年：あなたも GeoDev コミュニティと一緒に成長しよう！__
+ - 2013 年：ソリューション開発__事例__
+ - 2014 年：__開発者__のための GIS
+ - 2015 年：__マルチ プラットフォーム__時代の最適な開発
+ - 2016 年：__クラウド ファースト__時代の GIS アプリ開発事例
+ - 2017 年：あなたも GeoDev __コミュニティ__と一緒に成長しよう！
 
 ---
 
-## 変遷
+## BREAK DEMO
 
 BREAK も毎年趣向を凝らしたデモを披露してます！
  - 2013 年：なし
@@ -56,15 +52,15 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-## 2017年のテーマ
+## 2017年のテーマ「コミュニティ」
 
 - あなたも GeoDev コミュニティと一緒に成長しよう！
   - GeoDev = Geo Developer
-  - GeoDev Meetup
-  - ハッカソン
-  - Twitter
-  - 開発ブログ（GeoNet）
-  - 外部コミュニティとのコラボ
+    - ミートアップ企画・運営
+    - ハッカソン支援・参加
+    - ソーシャルメディア（Twitter）
+    - 開発ブログ（GeoNet）
+    - 外部コミュニティとのコラボ
 
 ---
 
@@ -72,13 +68,13 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-## GeoDev Meetup
+## ミートアップ企画・運営（GeoDev Meetup）
 
 <img src="images/geodevmeetup.png" alt="GeoDev Meetup" style="max-height:600px;">
 
 ---
 
-## GeoDev Meetup
+## ミートアップ企画・運営（GeoDev Meetup）
 
 - もくもく会
 - LT (ライトニングトーク)
@@ -88,15 +84,17 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-## GeoDev Meetup
+## ミートアップ企画・運営（GeoDev Meetup）
 
 - 毎月開催
+  - 昨年 12 月から開始して 5 度開催
+    - [GeoDev Meetup #5 - 地図データ可視化・アプリ作成もくもく会](https://geodev.connpass.com/event/53652/)
 
 <img src="images/geodevmeetup_members.png" alt="GeoDev Meetup 参加メンバー" style="max-height:600px;">
 
 ---
 
-## ハッカソン
+## ハッカソン支援・参加
 
 - RESAS API ハッカソン（東京x2、島根、佐賀、岐阜）
 - 室蘭市観光ハッカソン
@@ -105,9 +103,24 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
+## ハッカソン支援・参加
+
+- [MUROSARU](https://esrijapan.github.io/photospot-finder/)
+  - 室蘭市「企業・団体対抗 観光ハッカソン」公共クラウド賞
+  - 総務省「公共クラウドアプリコンテスト」優秀賞
+    - ArcGIS + Leaflet.js + React
+
+![MUROSARU](images/murosaru.png)
+
+---
+
 ## Twitter
 
-- #geodev_jp
+- [#geodev_jp](https://twitter.com/search?f=tweets&vertical=default&q=%23geodev_jp&src=savs)
+  - GeoDev Meetup 中継
+  - ブログ新規記事の案内
+  - その他いろいろ
+    - コミュニティでのオープンな情報共有にお使いください！
 
 <img src="images/twitter.png" alt="Twitter" style="max-height:600px;">
 
@@ -115,7 +128,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## 開発ブログ（GeoNet）
 
-- 弊社エンジニアが技術情報を発信しています！
+- [弊社エンジニアが技術情報を発信しています！](https://geonet.esri.com/groups/devcom-jp/overview)
 
 <img src="images/geonet.png" alt="GeoNet" style="max-height:600px;">
 
@@ -124,6 +137,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 ## 外部コミュニティとのコラボ
 
 - JXUG（Xamarin）
+  - [JXUG Xamarin ハンズオン！ ArcGIS を利用した地図アプリ開発](https://jxug.connpass.com/event/50809/)
 
 <img src="images/jxug_geodev.png" alt="JXUG x GeoDev" style="max-height:600px;">
 
@@ -135,10 +149,10 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## GeoDev LT
 
-- 「Tsuredatsu」
-  - RESAS x Japan Hackathon 最優秀賞
+- 「Tsuredatsu（つれだつ）」
+  - [RESAS x Japan Hackathon](https://eventdots.jp/event/609481) 最優秀賞
   - 現在は事業化に向けてプロジェクト進行中！
-    - @Startup Hub Tokyo
+    - [@Startup Hub Tokyo](https://startuphub.tokyo/)（東京都が運営する起業支援施設）
 
 <img src="images/tsuredatsu.png" alt="Tsuredatsu" style="max-height:600px;">
 
@@ -316,7 +330,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## スタートアップ企業の成長をサポート
 
- - Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
+- Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
 
 ![Esri Startup Program](images/startup_contents.png)
 
@@ -337,20 +351,28 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-# まとめ
+# 終わりに
 
 ---
 
-## Esri Leaflet (OSS)
-- [MUROSARU](https://esrijapan.github.io/photospot-finder/)
-  - 室蘭市で開催された「企業・団体対抗 観光ハッカソン」に参加し、公共クラウド賞を受賞
-  - ArcGIS + Leaflet.js + React
+<!-- .slide: class="geodev" -->
 
-![MUROSARU](images/murosaru.png)
+## GeoDev の今後
+
+- GeoDev Meetup を全国に広めたい
+  - 誰でも GeoDev イベントを開催できるようにガイダンス作ります！
+  - 主催したい方がいれば私たちがサポートします！
+- スタートアップや IoT といった新規領域でのアイデア共有
+  - IoT x GIS Meetup？
 
 ---
 
-# 開発に困ったらどうする？
+
+<!-- .slide: class="end" -->
+
+---
+
+# おまけ：開発に困ったらどうする？
 
 ---
 
@@ -372,11 +394,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## コミュニティ
 - GeoNet（Esri/ESRIジャパン）
-  - ESRIジャパン社員による技術 Tips や活動報告
+- GeoDev Meetup
 
 [![GeoNet](images/esrijapan_geonet.png)](https://geonet.esri.com/groups/devcom-jp)
 
----
-
-
-<!-- .slide: class="end" -->

@@ -36,7 +36,19 @@ section.has-light-background, section.has-light-background h1, section.has-light
   background-image: url(end.png);
 }
 
+.reveal .slide-background.geodev {
+  background-image: url(geodev.png);
+}
 
+.geodev-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  height: 100px;
+  margin: 20px;
+  opacity: 0.9;
+}
 
 body {
   background: rgb(27, 27, 27);
