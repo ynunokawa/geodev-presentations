@@ -199,6 +199,8 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 - ArcGIS GeoEvent Server
 
+<img src="images/geofence.png" alt="Diagram1" style="max-height:600px;">
+
 ---
 
 ## 要素技術③：リアルタイム送受信
