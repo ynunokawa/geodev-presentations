@@ -192,16 +192,17 @@ path[data-classbreak="gcf-2017-3"] {
         var label = new LabelClass(labelJson);
         label.symbol = labelSymbol;*/
 
-        var marker = new SimpleMarkerSymbol().setColor(new Color([0,0,0])).setPath("M14.5,29 23.5,0 14.5,9 5.5,0z").setOutline(new SimpleLineSymbol().setWidth(0.5).setColor(new Color([255,255,255])));
+        var path = "M25,2C12.318,2,2,12.318,2,25c0,12.683,10.318,23,23,23c12.683,0,23-10.317,23-23C48,12.318,37.683,2,25,2z M35.707,28.707 C35.512,28.902,35.256,29,35,29s-0.512-0.098-0.707-0.293L25,19.414l-9.293,9.293c-0.391,0.391-1.023,0.391-1.414,0 s-0.391-1.023,0-1.414l10-10c0.391-0.391,1.023-0.391,1.414,0l10,10C36.098,27.684,36.098,28.316,35.707,28.707z";
+        var marker = new SimpleMarkerSymbol().setColor(new Color([0,0,0])).setPath(path).setOutline(new SimpleLineSymbol().setWidth(2.5).setColor(new Color([255,255,255])));
         var renderer = new SimpleRenderer(marker);
         renderer.setRotationInfo({
           field: "course"
         });
         renderer.setSizeInfo({
           field: "score",
-          minSize: 4,
-          maxSize: 36,
-          minDataValue: -300,
+          minSize: 24,
+          maxSize: 42,
+          minDataValue: 0,
           maxDataValue: 300,
           valueUnit: "unknown"
         });
