@@ -18,9 +18,9 @@ ESRIジャパン株式会社
   - GeoDev LT
 - BREAK
 - 後半
-  - ArcGIS を使った開発 -最新情報-
-  - ArcGIS Runtime SDK for Xamarin
   - Esri スタートアップ プログラム
+  - ArcGIS を使った開発 -最新情報-
+  - Xamarin API (ArcGIS Runtime SDK for .NET)
 - 終わりに
 
 ---
@@ -223,6 +223,36 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
+# Esri スタートアップ・プログラム
+
+![Esri Startup Program](images/startup.png)
+
+---
+
+## スタートアップ企業の成長をサポート
+
+- Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
+
+![Esri Startup Program](images/startup_contents.png)
+
+---
+
+## Esri スタートアッププログラムの採用企業
+
+![Esri Startup Program](images/company.png)
+
+---
+
+## [Mapillary](https://www.mapillary.com/)
+- スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
+- クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
+「ストリートビュー」をユーザーの手で作れる
+- 日本の OSM コミュニティでも話題となった
+
+
+![Mapillary](images/mapillary.png)
+---
+
 # ArcGIS を使った開発
 ## 最新情報
 
@@ -247,6 +277,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 
 ---
+
 ## ArcGIS API for JavaScript
 
 ![ArcGIS API for JavaScript](images/javascript.png)
@@ -307,35 +338,6 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 ---
 
 # Xamarin API（ArcGIS Runtime SDK for .NET)
-
----
-
-# Esri スタートアップ・プログラム
-
-![Esri Startup Program](images/startup.png)
-
----
-
-## スタートアップ企業の成長をサポート
-
-- Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
-
-![Esri Startup Program](images/startup_contents.png)
-
----
-
-## Esri スタートアッププログラムの採用企業
-
-![Esri Startup Program](images/company.png)
-
----
-## [Mapillary](https://www.mapillary.com/)
-- スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
-- クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
-「ストリートビュー」をユーザーの手で作れる
-- 日本の OSM コミュニティでも話題となった
-
-![Mapillary](images/mapillary.png)
 
 ---
 
