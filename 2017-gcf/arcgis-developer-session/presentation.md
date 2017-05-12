@@ -344,6 +344,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 ![Esri Startup Program](images/company.png)
 
 ---
+
 ## [Mapillary](https://www.mapillary.com/)
 - スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
 - クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
@@ -353,6 +354,15 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 ![Mapillary](images/mapillary.png)
 
 ---
+
+## ブース展示
+
+![Esri Startup Program](images/startup_booth.png)
+
+---
+
+
+
 
 # 終わりに
 
