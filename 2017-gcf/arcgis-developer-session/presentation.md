@@ -171,9 +171,25 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## チーム構成
 
-- ３チームに分かれます
+- ２チーム（A チーム、B チーム）に分かれます
   - プレイヤー（各チーム１人ずつ）
   - サポーター（プレイヤー以外全員）
+
+<br/><br/>
+<table>
+  <tr>
+  <td>
+    ジオフェンスアプリ（Aチーム）
+    <br/><img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1">
+    <br/>http://bit.ly/gcfgame_t1
+  </td>
+  <td>
+    ジオフェンスアプリ（Bチーム）
+    <br/><img src="images/qr_code_gcfgame_t2.png" alt="qr_code_gcfgame_t2">
+    <br/>http://bit.ly/gcfgame_t2
+  </td>
+  </tr>
+</table>
 
 ---
 
@@ -251,6 +267,15 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 
 ![Mapillary](images/mapillary.png)
+
+---
+
+## ブース展示
+
+- [Esri Startup Program](https://www.esrij.com/products/startups/)
+
+![Esri Startup Program](images/startup_booth.png)
+
 ---
 
 # ArcGIS を使った開発
@@ -334,10 +359,6 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
   - 国内サポート対応検討中
 
 ![ArcGIS API for Python](images/python_api.png)
-
----
-
-# Xamarin API（ArcGIS Runtime SDK for .NET)
 
 ---
 
