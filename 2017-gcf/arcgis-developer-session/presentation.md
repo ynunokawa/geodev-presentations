@@ -178,9 +178,17 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 <table>
 <tr>
   <td><img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1" style="max-height:600px;"></td>
-  <td>ジオフェンスアプリ（Aチーム）<br/> http://bit.ly/gcfgame_t1</td>
+  <td>
+    <table>
+    <tr>
+      <td>ジオフェンスアプリ（Aチーム）</td>
+    </tr>
+    <tr>
+      <td>http://bit.ly/gcfgame_t1</td>
+    </tr>
+    </table>
+  </td>
 </tr>
-
 </table>
 
 ---
