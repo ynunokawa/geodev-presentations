@@ -185,7 +185,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
   </td>
   <td>
     ジオフェンスアプリ（Bチーム）
-    <br/><img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t2">
+    <br/><img src="images/qr_code_gcfgame_t2.png" alt="qr_code_gcfgame_t2">
     <br/>http://bit.ly/gcfgame_t2
   </td>
   </tr>
