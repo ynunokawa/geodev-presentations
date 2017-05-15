@@ -175,10 +175,23 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
   - プレイヤー（各チーム１人ずつ）
   - サポーター（プレイヤー以外全員）
 
-<img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1" style="max-height:600px;">
-ジオフェンスアプリ（Aチーム）
-http://bit.ly/gcfgame_t1
-
+<table>
+  <tr>
+  <td>
+    <img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1" style="max-height:600px;">
+    <br/>ジオフェンスアプリ（Aチーム）
+    <br/>http://bit.ly/gcfgame_t1
+  </td>
+  <td>
+    <img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1" style="max-height:600px;">
+    <br/>ジオフェンスアプリ（Aチーム）
+    <br/>http://bit.ly/gcfgame_t1
+  </td>
+  </tr>
+</table>
+  
+  
+  
 <table>
 <tr>
   <td><img src="images/qr_code_gcfgame_t1.png" alt="qr_code_gcfgame_t1" style="max-height:600px;"></td>
