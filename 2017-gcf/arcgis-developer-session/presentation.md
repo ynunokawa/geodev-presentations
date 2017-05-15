@@ -18,9 +18,9 @@ ESRIジャパン株式会社
   - GeoDev LT
 - BREAK
 - 後半
-  - ArcGIS を使った開発 -最新情報-
-  - ArcGIS Runtime SDK for Xamarin
   - Esri スタートアップ プログラム
+  - ArcGIS を使った開発 -最新情報-
+  - Xamarin API (ArcGIS Runtime SDK for .NET)
 - 終わりに
 
 ---
@@ -189,7 +189,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## 要素技術①：屋内測位
 
-- Indoor Atlas
+- IndoorAtlas社が提供する地磁気情報を用いた測位サービスを使用
 
 ![IndoorAtlas](images/indoor_atlas.png)
 
@@ -223,6 +223,36 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
+# Esri スタートアップ・プログラム
+
+![Esri Startup Program](images/startup.png)
+
+---
+
+## スタートアップ企業の成長をサポート
+
+- Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
+
+![Esri Startup Program](images/startup_contents.png)
+
+---
+
+## Esri スタートアッププログラムの採用企業
+
+![Esri Startup Program](images/company.png)
+
+---
+
+## [Mapillary](https://www.mapillary.com/)
+- スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
+- クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
+「ストリートビュー」をユーザーの手で作れる
+- 日本の OSM コミュニティでも話題となった
+
+
+![Mapillary](images/mapillary.png)
+---
+
 # ArcGIS を使った開発
 ## 最新情報
 
@@ -247,6 +277,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 
 ---
+
 ## ArcGIS API for JavaScript
 
 ![ArcGIS API for JavaScript](images/javascript.png)
@@ -260,7 +291,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
  - 新規ウィジェット追加（ベースマップ ギャラリー、スケールバー、展開）
 
 
- [![ArcGIS API for JavaScript](images/javascript_point.png)](https://developers.arcgis.com/javascript/latest/sample-code/layers-pointcloud-size-density/live/index.html)
+ ![ArcGIS API for JavaScript](images/javascript_point.png)
 
 
 ---
@@ -269,7 +300,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 - 2017年1月にバージョン 100.0 を国内リリース
  - API の共通化（SDK 間の機能やリリース バージョンの差を解消）
  - ライセンス形態の変更
- - モバイルの 3D 対応（ベータ機能）、オフライン機能の強化、ベクター タイル レイヤー、ポータル連
+ - モバイルの 3D 対応（ベータ機能）、オフライン機能の強化、ベクター タイル レイヤー、ポータル連携
 
 ![ArcGIS Runtime SDK](images/runtime.png)
 
@@ -286,7 +317,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## ArcGIS Pro SDK
 - 2017年5月にバージョン 1.4 を国内リリース
-  - ArcGIS Pro UI にソリューション ブランディングを付加
+  - UI にソリューション ブランディングを付加
    - カスタム スプラッシュ スクリーン、スタートアップ ページ、カスタム アイコンなど
   - ロール ベースのカスタマイズ
    - サインインした指定ユーザーのロールによるリボン UI 変更など
@@ -306,51 +337,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-## 今後の予定（Esri）
-
-- ArcGIS API for JavaScript
- - 4.4 (2017年7月) → 描画ツール、WMS/WMTS サービスのサポート
- - 4.5 (2017年Q3) → 編集ウィジェット
-- ArcGIS Runtime SDK
- - 100.1 (2017年6月) → モバイル 3D 対応、各種レイヤーのサポート
- - 100.2 (2017年Q4) → ローカル コンテンツの拡充
-- ArcGIS Pro SDK
- - 2.0 (2017年Q2) → Visual Studio 2017 対応（アセンブリに厳密名を採用するため、1.x で開発したアドインはコード修正が必要）
-- ArcGIS API for Python
- - Web GIS のアップデートに併せた継続的なリリース
-
----
-
-# ArcGIS Runtime SDK for Xamarin
-
----
-
-# Esri スタートアップ・プログラム
-
-![Esri Startup Program](images/startup.png)
-
----
-
-## スタートアップ企業の成長をサポート
-
-- Esri スタートアップ・プログラムは、スタートアップ企業が手がける製品・サービスに、より高度なマッピングや位置情報サービスを組み込むことで企業の成長を加速する3年間の支援プログラム
-
-![Esri Startup Program](images/startup_contents.png)
-
----
-
-## Esri スタートアッププログラムの採用企業
-
-![Esri Startup Program](images/company.png)
-
----
-## [Mapillary](https://www.mapillary.com/)
-- スウェーデンのマルモにあるスタートアップが開発したジオタグ付きの写真を共有するサービス
-- クラウドソーシング方式で街道に限らず世界中の場所を投稿できる
-「ストリートビュー」をユーザーの手で作れる
-- 日本の OSM コミュニティでも話題となった
-
-![Mapillary](images/mapillary.png)
+# Xamarin API（ArcGIS Runtime SDK for .NET)
 
 ---
 
@@ -400,4 +387,3 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 - GeoDev Meetup
 
 [![GeoNet](images/esrijapan_geonet.png)](https://geonet.esri.com/groups/devcom-jp)
-
