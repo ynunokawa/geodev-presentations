@@ -18,9 +18,9 @@ ESRIジャパン株式会社
   - GeoDev LT
 - BREAK
 - 後半
-  - ArcGIS を使った開発 -最新情報-
-  - ArcGIS Runtime SDK for Xamarin
   - Esri スタートアップ プログラム
+  - ArcGIS を使った開発 -最新情報-
+  - Xamarin API (ArcGIS Runtime SDK for .NET)
 - 終わりに
 
 ---
@@ -205,7 +205,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ## 要素技術①：屋内測位
 
-- Indoor Atlas
+- IndoorAtlas社が提供する地磁気情報を用いた測位サービスを使用
 
 ![IndoorAtlas](images/indoor_atlas.png)
 
@@ -239,108 +239,6 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
-# ArcGIS を使った開発
-## 最新情報
-
----
-
-## 開発者向けサービス
- - 2017年3月より開発者向けのサービスが更新されました
-
-![ArcGIS for Developers](images/arcgis_for_developers.png)
-
----
-
-## ArcGIS Developer Subscription
-![ArcGIS Developer Subscription](images/developer_subscription.png)
-
-- 各プランには、ArcGIS Online Deployment Plan（50 クレジット/月）が付属します
-
----
-
-## API/SDK
-![APS/SDK](images/api_sdk.png)
-
-
----
-## ArcGIS API for JavaScript
-
-![ArcGIS API for JavaScript](images/javascript.png)
-
----
-## ArcGIS API for JavaScript
-- 2017年4月にバージョン 4.3 を国内リリース
- - フィーチャの編集
- - シーン レイヤーのフィルタリング/クエリ機能
- - 点群レイヤーの操作（点の大きさと密度調整）
- - 新規ウィジェット追加（ベースマップ ギャラリー、スケールバー、展開）
-
-
- [![ArcGIS API for JavaScript](images/javascript_point.png)](https://developers.arcgis.com/javascript/latest/sample-code/layers-pointcloud-size-density/live/index.html)
-
-
----
-
-## ArcGIS Runtime SDK
-- 2017年1月にバージョン 100.0 を国内リリース
- - API の共通化（SDK 間の機能やリリース バージョンの差を解消）
- - ライセンス形態の変更
- - モバイルの 3D 対応（ベータ機能）、オフライン機能の強化、ベクター タイル レイヤー、ポータル連
-
-![ArcGIS Runtime SDK](images/runtime.png)
-
----
-
-## ArcGIS Runtime SDK
- - Xamarin API (ArcGIS Runtime SDK for .NET）が追加
-   - Forms, iOS, Android 開発に対応
-   - 国内サポート対応検討中
-
-![ArcGIS Runtime SDK for .NET](images/runtime_xamarin.png)
-
----
-
-## ArcGIS Pro SDK
-- 2017年5月にバージョン 1.4 を国内リリース
-  - ArcGIS Pro UI にソリューション ブランディングを付加
-   - カスタム スプラッシュ スクリーン、スタートアップ ページ、カスタム アイコンなど
-  - ロール ベースのカスタマイズ
-   - サインインした指定ユーザーのロールによるリボン UI 変更など
-
-![ArcGIS Pro](images/arcgis_pro.png)
-
----
-
-## ArcGIS API for Python
-- 2016年12月に米国リリース
-  - Python スクリプト による Web GIS の操作と自動化
-   - データの可視化、ジオプロセシング ツールの実行、ポータル内のコンテンツ/ユーザーの管理、ビッグデータ解析
-  - 実行環境: Jupyter Notebook
-  - 国内サポート対応検討中
-
-![ArcGIS API for Python](images/python_api.png)
-
----
-
-## 今後の予定（Esri）
-
-- ArcGIS API for JavaScript
- - 4.4 (2017年7月) → 描画ツール、WMS/WMTS サービスのサポート
- - 4.5 (2017年Q3) → 編集ウィジェット
-- ArcGIS Runtime SDK
- - 100.1 (2017年6月) → モバイル 3D 対応、各種レイヤーのサポート
- - 100.2 (2017年Q4) → ローカル コンテンツの拡充
-- ArcGIS Pro SDK
- - 2.0 (2017年Q2) → Visual Studio 2017 対応（アセンブリに厳密名を採用するため、1.x で開発したアドインはコード修正が必要）
-- ArcGIS API for Python
- - Web GIS のアップデートに併せた継続的なリリース
-
----
-
-# ArcGIS Runtime SDK for Xamarin
-
----
-
 # Esri スタートアップ・プログラム
 
 ![Esri Startup Program](images/startup.png)
@@ -367,6 +265,7 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 「ストリートビュー」をユーザーの手で作れる
 - 日本の OSM コミュニティでも話題となった
 
+
 ![Mapillary](images/mapillary.png)
 
 ---
@@ -379,8 +278,89 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 
 ---
 
+# ArcGIS を使った開発
+## 最新情報
+
+---
+
+## 開発者向けサービス
+ - 2017年3月より開発者向けのサービスが更新されました
+
+![ArcGIS for Developers](images/arcgis_for_developers.png)
+
+---
+
+## ArcGIS Developer Subscription
+![ArcGIS Developer Subscription](images/developer_subscription.png)
+
+- 各プランには、ArcGIS Online Deployment Plan（50 クレジット/月）が付属します
+
+---
+
+## API/SDK
+![APS/SDK](images/api_sdk.png)
 
 
+---
+
+## ArcGIS API for JavaScript
+
+![ArcGIS API for JavaScript](images/javascript.png)
+
+---
+## ArcGIS API for JavaScript
+- 2017年4月にバージョン 4.3 を国内リリース
+ - フィーチャの編集
+ - シーン レイヤーのフィルタリング/クエリ機能
+ - 点群レイヤーの操作（点の大きさと密度調整）
+ - 新規ウィジェット追加（ベースマップ ギャラリー、スケールバー、展開）
+
+
+ ![ArcGIS API for JavaScript](images/javascript_point.png)
+
+
+---
+
+## ArcGIS Runtime SDK
+- 2017年1月にバージョン 100.0 を国内リリース
+ - API の共通化（SDK 間の機能やリリース バージョンの差を解消）
+ - ライセンス形態の変更
+ - モバイルの 3D 対応（ベータ機能）、オフライン機能の強化、ベクター タイル レイヤー、ポータル連携
+
+![ArcGIS Runtime SDK](images/runtime.png)
+
+---
+
+## ArcGIS Runtime SDK
+ - Xamarin API (ArcGIS Runtime SDK for .NET）が追加
+   - Forms, iOS, Android 開発に対応
+   - 国内サポート対応検討中
+
+![ArcGIS Runtime SDK for .NET](images/runtime_xamarin.png)
+
+---
+
+## ArcGIS Pro SDK
+- 2017年5月にバージョン 1.4 を国内リリース
+  - UI にソリューション ブランディングを付加
+   - カスタム スプラッシュ スクリーン、スタートアップ ページ、カスタム アイコンなど
+  - ロール ベースのカスタマイズ
+   - サインインした指定ユーザーのロールによるリボン UI 変更など
+
+![ArcGIS Pro](images/arcgis_pro.png)
+
+---
+
+## ArcGIS API for Python
+- 2016年12月に米国リリース
+  - Python スクリプト による Web GIS の操作と自動化
+   - データの可視化、ジオプロセシング ツールの実行、ポータル内のコンテンツ/ユーザーの管理、ビッグデータ解析
+  - 実行環境: Jupyter Notebook
+  - 国内サポート対応検討中
+
+![ArcGIS API for Python](images/python_api.png)
+
+---
 
 # 終わりに
 
@@ -428,4 +408,3 @@ BREAK も毎年趣向を凝らしたデモを披露してます！
 - GeoDev Meetup
 
 [![GeoNet](images/esrijapan_geonet.png)](https://geonet.esri.com/groups/devcom-jp)
-
